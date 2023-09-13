@@ -1,0 +1,469 @@
+/* MENU NÈ VEI */
+
+#cabecalho {
+    position: fixed;
+    display: block;
+    top: 0px;
+    left: 0px;
+    /* margin: 0px 15% 0px 15%; */
+    height: 70px;
+    width: 1600px;
+    background-color: black;
+    color: white;
+    font-size: 30pt;
+    padding: 0px;
+    /* tem porcaria aki pra ver na hora de fazer o responsivo do cell meu amigo */
+    z-index: 10;
+
+}
+
+#cabecalho ul {
+    font-family: 'Trade Winds';
+    display: inline-block;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#cabecalho li {
+    display: inline-block;
+    padding: 6px 20px 6px 10px;
+}
+
+#cabecalho a{
+    color: white;
+    text-decoration: none;
+}
+
+#cabecalho li a:hover {
+    color: red;
+    transition: 200ms;
+}
+
+.autenticacao {
+    position: fixed;
+    right: 35px;
+    top: 0px;
+    font-family: 'Trade Winds';
+}
+
+.menu {
+    position: absolute;
+    top: 0px;
+    left: 35px;
+}
+
+body{
+
+    background-color: #5a5a5a;
+    top: 0px;
+    left: 0px;
+    margin:0px;
+    padding: 0px;
+}
+
+#all {
+    position: absolute;
+    top: 0px;
+    left: 15%;
+    background-color: white;
+    width: 70%;
+    /* box-shadow: 0px 0px 40px black; */
+    font-family: 'Exo', sans-serif;
+    padding: 0px;
+
+}
+
+.paginas {
+    top:0px;
+    position:relative;
+    max-width: 100%;
+    height: 750px;
+    background-color: white;
+    z-index: 2;
+    padding: 70px 20px 0px 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black
+}
+
+#inicio {
+    padding: 70px 20px 0px 20px
+}
+
+#contato {
+    height: 720px;
+}
+
+#chiu {
+    position: absolute;
+    width: 70%;
+    height: 2300px;
+    margin: 0px 15%;
+    padding: 0px;;
+    box-shadow: 0px 25px 40px black;
+    background-color: white;
+    z-index: 0;
+}
+
+.myTitulo {
+    display: none;
+    font-size: 25pt;
+}
+
+/* Inicio/Sobre */
+
+#inicio h1{
+    font-family: 'Trade winds';
+    font-size: 70pt;
+    margin: 10px auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30pt;
+}
+
+p {
+    font-size: 25px;
+    text-align: justify;
+}
+
+p a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* JOGOS */
+
+#gamesName {
+    position: absolute;
+    width: 30%;
+    left: 0px;
+    height: 100%;
+    top: 0px;
+    background-color: #333;
+    color: white;
+    z-index: 10;
+}
+
+#entre {
+    position: absolute;
+}
+
+#entre p {
+    background: linear-gradient(to right, white 36%, black 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#gamesName h3 {
+    margin: 10px;
+    text-align: center;
+
+}
+
+.game a{
+    text-decoration: none;
+    color: inherit
+}
+
+#gamesName table {
+    position: absolute;
+    width: 100%;
+    top: 200px; 
+}
+
+#gamesName td {
+    transition: 300ms;
+    color: white;
+}
+
+#gamesName table td:hover {
+    background-color: white;
+    color:black
+}
+
+
+#gamesImage {
+    position:absolute;
+    top:0px;
+    right: 0px;
+    width: 70%;
+    height: 900px;
+    overflow: hidden;
+}
+
+ .slides1 {
+    position: absolute;
+    opacity: 0;
+    top:0px;
+    left:0px;
+    max-height: 100%;
+    min-height: 100%;
+    width: 100%;
+    font-size: 50pt;
+    animation-name: animacaoSlide;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.slides2 {
+    position: absolute;
+    opacity: 0;
+    top:0px;
+    left:0px;
+    max-height: 100%;
+    min-height: 100%;
+    width: 100%;
+    font-size: 50pt;
+    animation-name: animacaoSlide;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+#slide1{
+    background-color:rgb(130, 0, 252) ;
+}
+
+#slide2 {
+    background-color: yellow;
+}
+
+#slide3 {
+    background-color: red;
+}
+
+#slide4 {
+    background-color: blue;
+}
+
+#slide5 {
+    background-color: green;
+}
+
+#slide6 {
+    background-color: rgb(255, 111, 255);
+}
+
+@keyframes animacaoSlide{
+    25%{
+        opacity: 1;
+        transform: scale(1,1.1);
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.slides1:nth-child(2){
+    animation-delay: 5s;
+}
+
+.slides1:nth-child(3){
+    animation-delay: 10s;
+}
+
+.slides2:nth-child(2){
+    animation-delay: 5s;
+}
+
+.slides2:nth-child(3){
+    animation-delay: 10s;
+}
+
+#gamesImage section {
+    position: absolute;
+    top:0px;
+    left:0px;
+    max-height: 100%;
+    min-height: 100%;
+    width: 100%;
+    display:none;
+}
+
+#linkjogos {
+    position: absolute;
+    top: -33px;
+}
+
+peq{
+    position: absolute;
+    font-size: 15pt;
+    top: 5px;
+    left: -80px;
+}
+
+peql {
+    position: absolute;
+    font-size: 15pt;
+    top: 28px;
+    left: -70px;
+    color: red
+}
+
+#cabecalho peql a {
+    color: red;
+}
+
+/*  RESPONSIVO  */
+
+
+/* WIdth */
+
+@media (max-width: 900px) {
+    #all {
+        width: 100%;
+        left: 0px;
+    }
+
+    .autenticacao{
+        left: 0px;
+        width: 100%;
+    }
+
+    #logado{
+        left: 0px;
+        font-size: 15pt;
+    
+    }
+
+    peq{
+        position: relative;
+        left:10px;
+    }
+
+    d{
+        position: relative;
+        top: 5px;
+        left: 10px;
+    }
+
+    peql {
+        left: 300px;
+        top: 10px;
+    }
+ 
+    #chiu {
+     width: 70%;
+ 
+     margin: 0px 15%;
+    }
+ 
+    .menu{
+        display: none;
+    }
+
+    #cabecalho{
+        padding:0px;
+        font-size: 30px;
+        height: 40px;
+    }
+
+    #cabecalho h1{
+        margin: 0px;
+        padding-top: 0px;
+    }
+
+    #cabecalho ul, #cabecalho li{
+        position: relative;
+        top:-10px;
+        left: 0px;
+    }
+
+    #inicio h1{
+        font-family: 'Trade winds';
+        font-size:35pt;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    /* jogos se tela pequena muda */
+
+    #gamesName {
+        width: 100%;
+        height: 200px;
+    }
+
+    #gamesName table {
+        top: 100px; 
+    }
+
+    #gamesImage {
+        top:200px;
+        width: 100%;
+    }
+
+ }
+
+
+ @media (max-width: 330px) {
+    #inicio h1 {
+        font-size: 25pt;
+    }
+}
+
+ @media (max-width: 600px) {
+    #cabecalho{
+        padding:0px;
+        font-size: 25px;
+        height: 40px;
+    }
+  }
+
+
+   /* HEIGTH */
+
+
+
+  @media (min-height: 1000px) {
+      body, html {
+          height: 100%;
+      }
+    .paginas {
+          height: 33%;
+      }
+
+      #contato {
+          height: 33%;
+      }
+
+      #all{
+          height: 299%;
+      }
+      #chiu {
+        position: absolute;
+        width: 70%;
+        height: 300%;
+        margin: 0px 15%;
+        padding: 0px;;
+        box-shadow: 0px 25px 40px black;
+        background-color: white;
+        z-index: 0;
+    }
+
+    p{
+        font-size: 30px;
+    }
+
+    #gamesImage{
+        height: 100%;
+    }
+  }
+
+
+
+
+ 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title> The Rafa's Nightmare</title>
+  <link rel="stylesheet" type="text/css" href="semcss.css" />
+  <link rel="stylesheet" type="text/css" href="inimigos.css">
+</head>
+
+<body onclick="cliqueCenario8()">
+  <script language="javascript" src="JS/movimento.js"></script>
+  <script language="javascript" src="JS/perguntas.js"></script>
+  <script language="javascript" src="JS/mapasEanimations.js"></script>
+
+  <div id="tela_jogo">
+    
+    <div id="mapa">
+      <!-- rafael e keane reves -->
+      <div id="rafael"></div>
+      <div id="keane"></div>
+
+      <!-- inimigos -->
+      <div class="inimigo" id="iniTeste"> </div>
+      <!-- a harley é um inimigo especial pra mim -->
+      <div id="harley"></div>
+
+      <!-- uma placa kkkk -->
+      <div id="placa"> </div>
+      <!-- caixa onde as perguntas aparecem :/ -->
+      <div id="caixaPerguntas"> </div>
+
+
+    </div>
+    <!-- Uma animaçao pra trocar de Sala -->
+    <div id='animacao'></div>
+
+    <!-- videos -->
+  
+    <video id="introducao" >
+      <source src="midia/video/chute.mp4"/>
+      Não foi possivel reproduzir o video pois o seu navegador não o suporta o formato
+  </video>
+
+  <video id="video2"> 
+    <source src="midia/video/chute.mp4"/>
+    Não foi possivel reproduzir o video, pois o seu navegador não suporta o formato
+  </video>
+
+  <div id="pular" onclick='pularVideo()'> <h1>Pular</h1>  </div>
+  <!-- musicas -->
+
+  <audio id="musicaMoto">
+    <source src="midia/musicas/FundoMotoClubClicker.mp3">
+  </audio>
+
+  <audio id="FundoInicioMusica"> 
+    <source src="midia/musicas/musicaFundoInicio.mp3">
+  </audio>
+
+  <audio id="Terremoto">
+    <source src="midia/musicas/terremoto.mp3">
+  </audio>
+
+  <audio id="tartaruga">
+    <source src="midia/musicas/tartaruga.mp3">
+ </audio>
+  
+  <!-- dialogo -->
+
+  <div id='caixaDialogo'>
+    <div id="imagem"></div>
+    <div id="texto"></div>
+  </div>
+
+  <!-- coisas do inicio -->
+
+    <div id='FundoInicio'>
+      <div id="nameGame" class="animac"> O Pesadelo de Rafael </div>
+      <div id="ofer" class="animac"> Oferecimentos </div>
+      <div id="ofer1" class="animac"> Cabecademanoel.ga </div>
+      <div id="play" class="animac" onclick='playClicado()'> <p>PLAY</p> </div>
+    </div>
+
+    <!-- video da morte fica na frente :/ -->
+    <video id='videoMorreu'>
+      <source src="midia/video/morreu.mp4"></soruce>
+        Não foi possivel reproduzir o video, pois o seu navegador não suporta o formato
+    </video>
+
+<!-- divs das Respostas -->
+    <div id="caixaRespostas">
+      <div id="res_1" class="respostas" onclick="validarResposta(0)">
+        <p> A. TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto</p>
+      </div>
+      <div id="res_2" class="respostas" onclick="validarResposta(1)">
+        <p> B. TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto</p>
+      </div>
+      <div id="res_3" class="respostas" onclick="validarResposta(2)">
+        <p> C. TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto</p>
+      </div>
+      <div id="res_4" class="respostas" onclick="validarResposta(3)">
+        <p> D. TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto TextoTexto</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

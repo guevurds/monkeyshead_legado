@@ -1,0 +1,635 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> MotoGrupoClicker Alpha 1.9 </title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="../../_css/geral.css">
+        <link rel="stylesheet" type="text/css" href="_css/lambari_clicker.css">
+    </head> 
+
+    <body onkeyup="teclas()" onclick="tutorialf()">
+
+        <script type="text/javascript">
+
+        // variaveis
+
+        var valor, numero, clique, PorSegundo, ValorClique, Pclique, VPorSegundo, PPorSegundo, Vx2, PVx2, upgradeC, upCK, PupCK, tmoto
+        var perera, v_loja, lixo, v_trabp, r_perera, rr_perera
+        var compraveis, botao, info, sobre, tperera, habilidades, TrabalhadorP
+        var antihack, antihack1
+		var botaoReset, resetar, abacaxi, g_rim, vdskill, block, Gordo,GordoBecker, v_gordo, melancia
+        var Dskills, buffB, rBecker, rrBecker, tfBecker
+
+        numero = 0 
+
+        clique = 1 
+
+        PorSegundo = 0 
+        
+        ValorClique = 5 
+
+        VPorSegundo = 10 
+ 
+        Vx2 = 150 
+
+        upCK = 1 
+		
+		PupCK = 200 
+
+        perera = 0
+
+        lixo = 1
+
+        v_trabp = 50 // rins aki
+        vdskill = 5
+        v_gordo = 100
+
+        r_perera = 0
+
+        rr_perera = 0
+
+        antihack= 0
+        antihack1= 0
+		
+		abacaxi = 0 
+        melancia = 0
+        block = 1
+
+        buffB = 1
+
+        rBecker = 0
+        rrBecker = 0
+        tfBecker = 0
+
+        
+
+        // variaves da segunda moeda do jogo
+
+        var moeda2, calculoDeMoeda, moedaI, number2, Moeda2
+
+        moeda2 = 0
+        calculoDeMoeda = 0
+        moedaI = 0
+
+        // clique
+
+        function clicou() {
+            numero = numero + (clique * buffB)
+            
+            
+            valor = document.getElementById('number')
+            valor.innerHTML = "<h1> " + numero + " </h1>";
+        }
+
+        function clicoupeloteclado() {
+            numero = numero + (clique * buffB)
+            valor = document.getElementById('number')
+            valor.innerHTML = "<h1> " + numero + " </h1>";
+}
+
+        
+    // + Pontos ao clickar 
+	
+	
+
+        function valor_clique() {
+            if (numero >= ValorClique) {
+            clique = clique + 1
+            numero = numero - ValorClique
+            calculoDeMoeda += ValorClique
+            ValorClique = ValorClique*2
+			Pclique = document.getElementById('plusclique')
+            Pclique.innerHTML = "<h2> +1 por clique: " + ValorClique + "</h2>";
+            valor.innerHTML = "<h1> " + numero + " </h1>";
+            } else {
+                alert("Você não tem pontos o suficiente para executar esta ação")
+            }
+        }
+
+    // +1 Ponto Por Segundo 
+
+        setInterval(function(){
+            numero = numero + (PorSegundo*upCK)*buffB
+            valor.innerHTML = "<h1> " + numero + " </h1>";
+            antihack1 = antihack - antihack1
+            if (antihack1 >= 14) {
+                alert("Para de usar hack seu filha da puta")
+                numero = 0
+            }
+            antihack = 0
+            antihack1 = 1
+        },1000)
+	    
+
+   
+        function clickador() {
+            if (numero >= VPorSegundo) {
+                numero = numero - VPorSegundo
+                calculoDeMoeda += VPorSegundo
+            PorSegundo += 1
+            VPorSegundo = VPorSegundo*3
+			PPorSegundo = document.getElementById('plusclickador')
+            PPorSegundo.innerHTML = "<h2> Clicador automatico: " + VPorSegundo + "</h2>";
+ 
+            } else {
+                alert("Você não tem pontos o suficiente para executar esta ação")
+            }
+        }
+
+        // Multiplicador de Pontos por clique
+		
+		
+
+        function x_clique() {
+            if (numero >= Vx2) {
+            clique = clique*2
+			numero = numero - Vx2
+            calculoDeMoeda += Vx2
+            Vx2 = Vx2*3
+			PVx2 = document.getElementById('x2clique')
+            PVx2.innerHTML = "<h2>2x mais por clique: " + Vx2 +"</h2>";
+			valor.innerHTML = "<h1> " + numero + " </h1>";
+        } else {
+            alert("Você não tem pontos o suficiente...")
+        }
+        }
+		
+		// melhorar os Clicadores Automaticos
+		
+
+		
+		function upgrade_clickador() {
+		if ( numero >= PupCK ) {
+		    numero = numero - PupCK
+            calculoDeMoeda += PupCK
+			PupCK = PupCK*3
+			upCK = upCK*2
+			upgradeC = document.getElementById('melhorarCK')
+			upgradeC.innerHTML = "<h2>Clickadores automaticos 2x mais pontos: " + PupCK + "</h2>" ;
+			valor.innerHTML = "<h1> " + numero + " </h1>";
+			} else {
+			alert("você não tem pontos o suficiente...")
+			}
+		    }
+			
+			// Informar oque cada coisa faz
+			
+			function infoAA() {
+                info.innerHTML = " <p> Ao clicar no botão (+Pontos) você ganha um determinado número de pontos que pode ser aumentado por outros botões. </p> ";
+			}
+
+            function infoBB() {
+                info.innerHTML = " <p> Ao clicar em (+1 por clique) você consome um determinado número de pontos e aumenta o número de pontos que ganha por clique em 1. </p> ";
+            }
+
+            function infoCC() {
+                info.innerHTML = " <p> Ao clicar em (Clicadores Automaticos) (CA) você consome um determinado número de pontos para ganhar um clicador automático que te dá um determinado número de pontos por segundo, que pode ser aumentado por outro botão </p>";
+            }
+
+            function infoDD() {
+                info.innerHTML = " <p> Ao clicar em (2x mais por clique) você consome um determinado número de pontos para duplicar o número de pontos que você ganha por clique. </p> " ;
+            }
+
+            function infoEE() {
+                info.innerHTML = " <p> Ao clicar em (clicadores automaticos 2x mais pontos) você consome um determinado número de pontos para duplicar o número de pontos que cada clicador automático te dá por segundo. </p> "
+            }
+
+            function infoFF() {
+                info.innerHTML =" <p> Isso é uma habilidade. Você poderá usá-la para multiplicar seus pontos (180s de tempo de recarga)."
+            }
+
+            function infoGG() {
+                info.innerHTML = "<p> As habilidades inicialmente estao bloqueadas, então para desbloqueala é preciso comprar isto. </p>"
+            }
+
+            function infoHH() {
+                info.innerHTML = "<p> Duplica por 45 segundos todos os meios de ganhar pontos, inclusive o trabalhador perera (240s de recarga) </p>"
+            }
+
+            function vazio() {
+                info.innerHTML = " <p> Passe o mouse nos botôes para saber o quê cada um faz. </p> "
+            }
+
+            // informarções de quanto vale o clique e quanto os CA dão
+
+            function saber() {
+                sobre.innerHTML = "<p> Pontos ganhos por clique: " + clique + " <br> Clicadores automáticos adiquiridos (CA): " + PorSegundo + " <br> Pontos por segundo que cada (CA) da: " + upCK + "<br> Total de pontos que os (CA) dão por segundo: " + PorSegundo*upCK + " </p>"
+            }
+
+            // Musica
+
+            var som = 1
+
+            function joao() {
+                if (som == 1) {
+                    var cao1 = document.getElementById('musica')
+                    cao1.innerHTML = " <div id='midia2'> </div> "
+                    som = 2
+                } else if (som == 2) {
+                    var cao2 = document.getElementById('musica')
+                    cao2.innerHTML = " <div id='midia1'> <audio controls autoplay loop> <source src='_musica/FundoMotoClubClicker.mp3' /> </audio> </div> "
+                    som = 1
+                }
+            }
+
+            // no teclado
+
+            function teclas() {
+                var tecla = window.event.keyCode;
+
+                if (perera == 1) {
+                    if(lixo == 1 ){ 
+                    if(tecla == 88) {
+                    clicoupeloteclado()
+                   } 
+                   if (tecla == 90) {
+                       clicoupeloteclado()
+                   }
+                   } else{}
+                }else { }
+           
+            }
+
+            // tutorial
+
+            function tutorialf() {
+                var tutorialpp = document.getElementById('tutorialp')
+                tutorialpp.innerHTML = " ";
+                perera = 1
+            }
+
+            // Loja
+
+            // troço de iniciar tudo
+
+            window.onload = function(){
+               compraveis = document.getElementById('compraveis');
+               botao = document.getElementById("botao");
+               sobre = document.getElementById('sobre');
+               info = document.getElementById("informar");
+               tperera = document.getElementById("tperera");
+               habilidades = document.getElementById("habilidades");
+               number2 = document.getElementById("number2");
+               Moeda2 = document.getElementById("moeda2");
+			   botaoReset = document.getElementById("botaoReset")
+			   resetar = document.getElementById("resetar")
+			   g_rim = document.getElementById("g_rim")
+			   TrabalhadorP = document.getElementById("TrabalhadorP")
+               Gordo = document.getElementById("Gordo")
+               GordoBecker = document.getElementById("GordoBecker")
+               Dskills = document.getElementById("Dskills")
+
+
+               compraveis.classList.add("esconder");
+               info.classList.add("esconder");
+               tperera.classList.add("esconder")
+               number2.classList.add("esconder")
+               Moeda2.classList.add("esconder")
+			   botaoReset.classList.add("esconder")
+			   resetar.classList.add("esconder")
+               GordoBecker.classList.add("esconder")
+               v_loja = 0;
+
+               // anti erro
+               clicou();
+               numero = 0;
+            }
+
+
+            function store() {
+                var loja = document.getElementById('loja')
+
+                if (v_loja == 0) {
+                    // abrir loja
+                    loja.innerHTML = "<h1>Fechar Loja</h1>";
+                    compraveis.classList.remove("esconder");
+                    info.classList.remove("esconder")
+                    number2.classList.remove("esconder")
+                    Moeda2.classList.remove("esconder")
+                    botao.classList.add("esconder")
+                    sobre.classList.add("esconder")
+                    habilidades.classList.add("esconder")
+					botaoReset.classList.remove("esconder")
+                    v_loja = 1
+                    lixo = 0
+                } else if (v_loja == 1) {
+                    // fechar loja
+                    loja.innerHTML = "<h1>Abrir Loja</h1>";
+                    compraveis.classList.add("esconder")
+                    info.classList.add("esconder")
+                    number2.classList.add("esconder")
+                    Moeda2.classList.add("esconder")
+                    botao.classList.remove("esconder")
+                    sobre.classList.remove("esconder")
+                    habilidades.classList.remove("esconder")
+					botaoReset.classList.add("esconder")
+
+                    v_loja = 0
+                    lixo= 1
+                }
+            } 
+
+            // Trabalhador Perera
+
+            function trabp() {
+				
+				if(abacaxi == 0 ) {
+				
+                if(block == 0) {
+
+                if (moeda2 >= v_trabp) {
+                    moeda2 -= v_trabp
+                    TrabalhadorP.innerHTML = "<h2> COMPRADO </h2>";
+                    TrabalhadorP.classList.add("comprado")
+                    tperera.classList.remove("esconder");
+					number2.innerHTML = "<h1>"+ moeda2 +"</h1>"
+					abacaxi = 1
+                } else {
+                    alert("lhe faltam rins...")
+                }
+
+                } else {
+                    alert("A compra de habilidades esta bloqueada")
+                }
+
+
+            } else {
+			 alert("você ja comprou ele po")
+			}
+			}
+
+            function hperera() {
+                if (r_perera == 0) {
+                    numero = (numero*2)*buffB
+                    tperera.classList.add("recarga")
+                    r_perera = 180
+                    rr_perera = 1
+                    tperera.innerHTML = "<h2>x2 " + r_perera + "s</h2>";
+                } else {
+                    alert("em recarga")
+                }
+            }
+            
+            setInterval(() => {
+                if (rr_perera == 1) {
+                    r_perera = r_perera - 1
+                    tperera.innerHTML = "<h2>x2 " + r_perera + "s</h2>";
+                    if (r_perera <= 0) {
+                        rr_perera = 0
+                        tperera.classList.remove("recarga")
+                        tperera.innerHTML = "<h2> x2 </h2>";
+                    } else {}
+                } else {}
+                
+            }, 1000);
+
+            // Reset e Segunda Moeda
+
+            function reset() {
+                moedaI = calculoDeMoeda / 500000
+                moedaI = parseInt(moedaI)
+				g_rim.innerHTML = "<h1>"+ moedaI + "</h1>"
+				    // abrir reset
+				    compraveis.classList.add("esconder")
+                    info.classList.add("esconder")
+					resetar.classList.remove("esconder")
+					botaoReset.classList.add("esconder")
+					loja.classList.add("esconder")
+					
+				} 
+
+            function r_nao() {
+				    // fechar reset
+				    compraveis.classList.remove("esconder");
+                    info.classList.remove("esconder")
+					resetar.classList.add("esconder")
+					loja.classList.remove("esconder")
+					botaoReset.classList.remove("esconder")
+				} 
+
+            function r_sim() {
+                moeda2 += moedaI
+                moedaI = 0
+                calculoDeMoeda = 0
+                numero = 0 
+                clique = 1 
+                PorSegundo = 0 
+                ValorClique = 5 
+                VPorSegundo = 10 
+                Vx2 = 150 
+                upCK = 1 
+                PupCK = 200
+                abacaxi = 0
+                melancia = 0
+                block = 1
+
+                number2.innerHTML = "<h1>" + moeda2 + "</h1>";
+                
+				TrabalhadorP.innerHTML = "<h2> Habilidade Bloqueada: <h2 class='rins'> 50 </h2> </h2></div>";
+				tperera.classList.add("esconder");
+
+                Gordo.innerHTML = "<h2> Habilidade Bloqueada: <h2 class='rins'> 100 </h2> </h2></div>"
+                GordoBecker.classList.add("esconder")
+
+                TrabalhadorP.classList.remove("comprado")
+                Dskills.classList.remove("comprado")
+                Gordo.classList.remove("comprado")
+                GordoBecker.classList.remove("funcionando")
+
+				rr_perera = 1
+				r_perera = 1
+                rBecker = 0
+                rrBecker = 1
+                buffB = 1
+                tfBecker = 0
+				
+				    // fechar reset
+				    compraveis.classList.remove("esconder");
+                    info.classList.remove("esconder")
+					resetar.classList.add("esconder")
+					loja.classList.remove("esconder")
+					botaoReset.classList.remove("esconder")
+					
+					// fazendo o preço real aparecer 
+					Pclique.innerHTML = "<h2> +1 por clique: " + ValorClique + "</h2>";
+					upgradeC.innerHTML = "<h2>Clickadores automaticos 2x mais pontos: " + PupCK + "</h2>" ;
+					PPorSegundo.innerHTML = "<h2> Clicador automatico: " + VPorSegundo + "</h2>";
+					PVx2.innerHTML = "<h2>2x mais por clique: " + Vx2 +"</h2>";
+                    Dskills.innerHTML = "<h2> Desbloquear Habilidades:"+ vdskill +" </h2>"
+                				
+
+                number2.innerHTML = "<h1>"+moeda2+"</h1>";
+                // seu retardado o trabalhador perera nao entra aki pq ele vai custar RIM entao nao esquece de mexer nisso porra caralhp
+            }
+
+
+            // Desbloquear Habilides
+
+            function desbloquearH() {
+                if(block == 1) {
+                if (moeda2 >= vdskill) {
+                    moeda2 -= vdskill
+                    block = 0
+                    TrabalhadorP.innerHTML = "<h2> Trabalhador Perera: </h2> <h2 class='rins'> 50</h2></div>";
+                    Gordo.innerHTML = "<h2> Gordo Becker: <h2 class='rins'> 100</h2> </h2>";
+                    Dskills.innerHTML = "<h2> COMPRADO </h2>"
+                    Dskills.classList.add("comprado")
+                    number2.innerHTML = "<h1>" + moeda2 + "</h1>";
+                } else {
+                    alert("você não tem rins o suficiente")
+                }
+            } else {
+                alert("você ja comprou isto")
+            }
+            }
+
+            // Becker grande gordo 
+
+            function GordoAbsoluto() {
+                if (melancia == 0) {
+                if (block == 0) {
+
+                if (moeda2 >= v_gordo) {
+                    moeda2 -= v_gordo
+                    number2.innerHTML = "<h1>" + moeda2 + "</h1>";
+                    GordoBecker.classList.remove("esconder")
+
+                    Gordo.innerHTML ="<h2> COMPRADO </h2>"
+                    Gordo.classList.add("comprado")
+
+                    melancia = 1
+                }else {
+                    alert("Você não tem rins o suficiente...")
+                }
+            } else {
+                alert("a compra de habilidades esta bloqueada")
+            }
+                } else {alert("Você ja comprou isto")}
+            }
+
+            // fazendo o gordo funcionar
+
+            function hBecker() {
+                if (rBecker == 0) {
+                    buffB = 2
+                    tfBecker = 45
+                    rBecker = 1
+                    GordoBecker.classList.add("funcionando")
+                    GordoBecker.innerHTML = "<h2> Buff de x2 "+ tfBecker +"</h2>"
+                } else {
+                    alert("ou o Gordo Becker esta em funcionamento ou esta em recarga")
+                }
+            }
+
+            setInterval(() => {
+                if (tfBecker > 0) {
+                    tfBecker -= 1
+                    GordoBecker.innerHTML = "<h2> Buff de x2 "+ tfBecker +"</h2>"
+                    if (tfBecker == 0) {
+                        GordoBecker.classList.remove("funcionando")
+                        GordoBecker.classList.add("recarga")
+                        rrBecker = 240
+                        buffB = 1
+                    }
+                } else if (rrBecker <= 240 && rrBecker > 0) {
+                    rrBecker -= 1
+                    GordoBecker.innerHTML = "<h2> Buff de x2 "+ rrBecker +"</h2>"
+                    if (rrBecker == 0) {
+                        GordoBecker.classList.remove("recarga")
+                        rBecker = 0
+                        GordoBecker.innerHTML = "<h2> Buff de x2 </h2>"
+                    }
+                }
+            }, 1000);
+
+
+        </script>
+           
+        <div id="jogo">
+
+                <div id="botao" onclick="clicou()" onmousemove="infoAA()" onmouseout="vazio()"> </div>
+
+                <div id="loja" onclick="store()"> <h1>Abrir Loja</h1>
+                    </div>
+
+		  <div id="compraveis">
+
+                <div id='plusclique'  onclick='valor_clique(); saber()' onmousemove='infoBB()' onmouseout='vazio()'> <h2> +1 por clique: 5 </h2> </div> 
+                <div id='plusclickador' onclick='clickador(); saber()' onmousemove='infoCC()' onmouseout='vazio()'> <h2> Clicador automatico: 10</h2> </div>  
+                <div id='x2clique' onclick='x_clique(); saber()' onmousemove='infoDD()' onmouseout='vazio()'> <h2>2x mais por clique: 150</h2></div>
+                <div id='melhorarCK' onclick='upgrade_clickador(); saber()' onmousemove='infoEE()' onmouseout='vazio()'> <h2>Clickadores automaticos 2x mais pontos: 200</h2> </div> 
+
+                <div id="Dskills" onclick="desbloquearH()" onmousemove="infoGG()" onmouseout="vazio()"> <h2> Desbloquear Habilidades: </h2> <h2 class="rins"> 5 </h2> </div>
+                <div id="TrabalhadorP" onclick="trabp()" onmousemove="infoFF()" onmouseout="vazio()"> <h2> Habilidade Bloqueada: </h2> <h2 class='rins'> 50</h2></div>
+                <div id="Gordo" onclick="GordoAbsoluto()" onmousemove="infoHH()" onmouseout="vazio()"> <h2> Habilidade Bloqueada: <h2 class='rins'> 100</h2> </h2></div>
+         
+          <!-- <button onclick="comprar()" onmousemove="infoFF()"></button>
+        -->
+           </div>
+
+           <div id="habilidades">
+               <div id="tperera" onclick="hperera()"> <h2> x2 </h2> </div>
+               <div id="GordoBecker" onclick="hBecker()"> <h2> Buff de x2 </h2> </div>
+           </div>
+         
+		
+		  <div id="informar"> <p> Passe o mouse nos botôes para saber oque cada um faz </p> </div>
+        
+        <div id="dinheiro">
+
+         <div id="moeda"> </div>
+         <div id ="number"><h1> 0 </h1> </div>
+
+         <div id="moeda2"> </div>
+         <div id="number2"><h1> 0 </h1> </div>
+         
+        </div>
+
+		  <div id="sobre"> <p> 
+		                   Pontos ganhos por clique: 1 <br>
+		                   Clicadores automáticos adiquiridos (CA): 0 <br>
+					       Pontos por segundo que cada (CA) te dá: 1 <br>
+						   Total de pontos que os (CA) dão por segundo: 0 
+						  </p>
+                      </div>
+          <div id="botaoReset" onclick="reset()"> <h1> Resetar </h1> </div>
+        
+          <div id="resetar">
+		  
+		     <p> Ao resetar o game você ganhara rins e perdera tudo exeto os rins que vc ja possui. 
+			 voce ganahra em rins a quantia a baixo. Deseja Realmente Resetar o Jogo? </p>
+
+            <div id="gg_rim"> 
+			<div id="g_rim"> </div>  
+			</div>
+			
+                <div id="sim" onclick="r_sim()"> <h1> SIM </h1> </div>
+                <div id="nao" onclick="r_nao()"> <h1> NÃO </h1> </div>
+
+          </div>
+          
+        </div>
+      
+        <div id="musica" onclick="joao()">
+        <div id="midia1" >
+                
+            <audio controls autoplay loop>
+                    <source src="_musica/FundoMotoClubClicker.mp3" >
+            </audio>
+
+          </div>
+        </div>
+        <div id="tutorialp">
+        <div id="tutorial1">
+            <div id="tutorial2">
+                 <h1> Tutorial </h1> 
+                <p> Olá gente, esse é o tutorial. O bagulho é simples, você clica na moto
+                ou pode usar as teclas <b>X</b> e <b>Z</b> para ganhar pontos.<br> Você pode aumentar os pontos que ganha através da "Loja".<br>
+                <br><br> <h2> <b> clique em qualquer lugar para jogar. </b> </h2>
+            </p></div>
+        </div>
+       </div>
+
+    </body>
+</html>

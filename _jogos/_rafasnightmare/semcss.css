@@ -1,0 +1,269 @@
+*{
+    user-select: none;
+}
+body{
+    background-color:#666;
+}
+
+#tela_jogo {
+    position: absolute;
+    background-color: #909090;
+    height: 700px ;
+    width: 900px;
+    top: 10px;
+    left: 350px;
+    color: white;
+    
+}
+
+/* fazer todos os filhos da div inciarem com essas propriedades so pra n precisar dar position abslute pra todos */
+div:nth-of-type(2n) {
+    position: inherit;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    display: inline-block;
+}
+
+div:nth-of-type(2n + 1) {
+    position: inherit;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    display: inline-block;
+}
+
+ div:nth-of-type(1) {
+    position: inherit;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    display: inline-block;
+}
+
+/* mexendo um pouco nos personagens */
+
+#rafael{
+    height: 100px;
+    width: 100px;
+    background: url('midia/rafaeis/rafael_parado_frente.png') no-repeat;
+    background-size: 100px, 100px;
+    background-color: transparent;
+    top: 260px;
+    left: 440px;
+}
+
+#keane{
+    background-color: transparent;
+    background: url('midia/outrasImg/keane.gif') no-repeat;
+    background-size: 75px, 75px;
+    height: 100px;
+    width: 100px;
+    top: 150px;
+    left: 150px; 
+    display: inline-block;
+}
+
+/* mexendo nas respostas */
+
+#caixaRespostas {
+    bottom: 10px;
+    height: 300px;
+    width: 850px;
+    left:25px;
+    display: none;
+    background: url('midia/outrasImg/caixaRespostas.png')
+}
+
+#res_1, #res_2, #res_3, #res_4 {
+    color: white;
+    max-height: 65px;
+    width: 800px;
+    left: 25px;
+    font-size: 14pt;
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+    text-align: center;
+}
+
+p {
+    padding: 0px;
+    margin:  5px 0px;
+}
+
+#res_1:hover, #res_2:hover, #res_3:hover, #res_4:hover {
+    text-decoration: underline;
+}
+
+#res_1 {
+    top: 8px;
+}
+
+#res_2 {
+    top: 81px;
+}
+
+#res_3 {
+    top: 154px;
+}
+
+#res_4 {
+    top: 227px;
+}
+/* mexendo no mapa */
+
+#mapa {
+    top:0px;
+    left:0px;
+    background: url('midia/mapas/c1.png') no-repeat ;
+    background-size: 900px, 700px;
+    width: 900px;
+    height: 700px;
+}
+
+/* mexendo na caixa de perguntas */
+
+#caixaPerguntas {
+    top: 20px;
+    left: 100px;
+    width: 700px;
+    height: 350px;
+    display: none;
+    padding: 0px 20px;
+    text-align: left;
+    background: url('midia/outrasImg/caixaPergunta.png') no-repeat;
+}
+
+#caixaPerguntas p {
+    padding-left: 30px;
+}
+/* so mexendo numa porta fake ( fake pq depois eu vou tirar) */
+
+#porta {
+    top: 165px;
+    right: 0px;
+    width: 30px;
+    height: 130px;
+}
+
+/* animacao trocar de Sala */
+
+#animacao {
+    top:0px;
+    left:0px;
+    width: 900px;
+    height: 700px;
+    opacity: 0;
+}
+
+/* coisas de animacao do inicio */
+
+#FundoInicio {
+    background-color: white;
+    color: Black;
+    top: 0px;
+    left: 0px;
+    width: 900px;
+    height: 700px;
+    font-size: 70px;
+    text-align: center;
+/*  aki oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
+    /* display: none;  */
+}
+
+#nameGame, #ofer, #ofer1, #play{
+  background-color: transparent;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 900px;
+  padding: 300px 0px;
+}
+
+#play p:hover {
+    color: red;
+    transition: 700ms;
+}
+ 
+#play {
+    display: none;
+}
+
+/* videos */
+
+#introducao, #video2, #videoMorreu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width:900px;
+    height:700px;
+    background-color: black;
+    /* aki oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
+    /* display: none; */
+}
+
+#video2, #videoMorreu{
+    display: none;
+}
+
+/*  dialogo */
+#caixaDialogo {
+    top: 10px;
+    left: 20px;
+    width: 860px;
+    height: 200px;
+    color: white;
+    display: none;
+    background: url('midia/outrasImg/dialogo.png') no-repeat;
+}
+
+#imagem {
+    top: 25px;
+    left: 25px;
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+}
+
+#texto{
+    top: 25px;
+    left: 200px;
+    background-color: transparent;
+    width: 635px;
+    height: 150px;
+}
+
+
+/* preto :/ kkkk  */
+
+#preto {
+    width: 100%;
+    height: 100%;
+    display: none
+}
+
+#musicaMoto {
+    display: none;
+}
+
+/* pra poder Pular o video */
+
+#pular{
+    bottom:100px;
+    right: 100px;
+    color: Red;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+#pular:hover{
+    color: #aa0000;
+}
+
+#placa {
+    background-color: transparent;
+}
+
+
+

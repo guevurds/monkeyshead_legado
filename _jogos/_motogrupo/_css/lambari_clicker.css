@@ -1,0 +1,411 @@
+#jogo {
+   position: absolute;
+   background-color: #c0c0c0;
+   width: 1000px;
+   height: 580px;
+   top: 20px;
+   left:200px;
+   border-radius: 10px;
+}
+
+#informar {
+    position: absolute;
+    top: 480px;
+    left: 0px;
+    width: 900px;
+    height: 80px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+ }
+
+ /* Loja é aki */
+ 
+ #compraveis {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    width: 980px;
+    height: 395px;
+    border: black;
+    z-index:9;
+ }
+
+ #compraveis div {
+     border-radius: 30px;
+     text-align: center;
+     width: 250px;
+     height: 100px;
+     background-color: #cdcdcd;
+     padding-left: 2px;
+     padding-right: 2px;
+     padding-bottom: 0px;
+ }
+
+
+ #plusclique{
+     top: 25px;
+     left: 3px;
+     padding-top: 2px;
+     margin: 0px;
+     position: absolute;
+ }
+
+ #plusclickador{
+     padding-top: 2px;
+     position: absolute;
+     margin: 0px;
+     top: 135px;
+     left: 3px;
+ }
+
+ #x2clique {
+   padding-top: 2px;
+   margin: 0px;
+   position: absolute;
+   top: 245px;
+   left: 3px;
+ }
+
+ #melhorarCK {
+   position: absolute;
+   padding-top: 0px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   left: 270px;
+   top: 25px;
+ }
+ #melhorarCK h2 {
+    margin: 0px;
+ }
+
+ #Dskills {
+   position: absolute;
+   left: 270px;;
+   top: 135px; 
+   padding-top: 0px;
+   margin-top: 0px;
+ }
+
+ #Dskills h2 {
+    margin: 0px;
+ }
+
+ #TrabalhadorP {
+    position: absolute;
+    left: 270px;;
+    top: 245px; 
+    padding-top: 0px;
+    margin-top: 0px;
+ }
+
+ #Gordo {
+    position: absolute;
+    top:25px;
+    left: 540px;
+    padding-top: 0px;
+    margin-top: 0px;
+ }
+
+ #informar p {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+#sobre {
+    position: absolute;
+    width: 400px;
+    height: 170px;
+   background-color: black;
+   padding: 10px;
+   border-radius: 20px;
+   bottom: 10px;
+   left: 300px;
+   z-index: 5;
+}
+
+#sobre p {
+   text-align: center;
+   font-weight: bold;
+   color: white;
+   font-size: 15pt;
+}
+
+
+#moto{
+   width: 100px;
+   height: 85px;
+}
+
+#botao {
+   position: relative;
+   top: 100px;
+   left: 330px;
+   width: 350px;
+   height: 350px;
+   background-image: url(../_img/moto1.png);
+   background-size: 350px,350px ;
+   background-repeat: no-repeat;
+}
+
+#botao:active {
+    background-image: url(../_img/moto2.png) ;
+    background-size: 350px,350px ;
+    background-repeat: no-repeat;
+}
+
+ /* aqui é as moedas vei  */
+
+ #dinheiro {
+    position: absolute;
+    top:10px;
+    left: 25px;
+    height: 100px;
+ }
+
+ 
+#moeda {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width:50px;
+   height:50px;
+   background-image: url("../_img/lambari.png");
+   background-size: 50px, 50px;
+   background-repeat: no-repeat;
+}
+
+#number {
+   position: absolute;
+   top: -15px;
+   left: 53px;
+   height: 50px;
+}
+
+#moeda2 {
+   position: absolute;
+   top:60px;
+   left: 0px;
+   width:50px;
+   height:50px;
+   background-image: url("../_img/rim.png");
+   background-size: 37px, 50px;
+   background-repeat: no-repeat;
+}
+#number2 {
+   position: absolute;
+   top: 45px;
+   left: 53px;
+   height: 50px;
+   color:#fa5c00;
+}
+
+/* audio */
+
+#midia1 audio{
+   position:relative;
+   width:0px;
+   height:0px;
+}
+
+#musica {
+   position:absolute;
+   top: 525px;
+   left: 1150px;
+   width:45px;
+   height:45px;
+}
+
+#midia1{
+   position:relative;
+   width: 45px;
+   height: 45px;
+   background-image: url("../_img/som1.png");
+   background-size: 45px,45px;
+   background-repeat: no-repeat;
+}
+
+#midia2 {
+   position: relative;
+   width: 45px;
+   height: 45px;
+   background-image: url("../_img/som2.png");
+   background-size: 45px,45px;
+   background-repeat: no-repeat;
+}
+
+#tutorial1 {
+   text-align: center;
+   color: #fff;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.7);
+   z-index: 10;
+}
+
+#tutorial2 {
+   position: absolute;
+   top: 120px;
+   left: 400px;
+   width: 40%;
+   height: 50%;
+   background-color: #000;
+   border-radius:100px;
+   border-width: 2px;
+   border-color: #fff;
+   border-style: solid;
+   padding: 1%;
+   z-index: 11;
+}
+
+#loja {
+   position: absolute;
+   top: 10px;
+   right: 30px;
+   width: 200px;
+   height: 50px;
+   background-color: #fff;
+   border-radius:20px;
+   text-align: center;
+}
+
+#loja h1{
+   margin: 0px;
+   padding: 0px;
+}
+
+.esconder {
+   display: none;
+}
+
+/*  Habilidades */
+
+#habilidades {
+   position: absolute;
+   top:65px;
+   left:20px;
+   width: 250px;
+   height: 500px;
+   z-index: 5;
+}
+
+#habilidades div {
+   position: absolute;
+   width: 200px;
+   height: 50px;
+   margin-left: 25px;
+   margin-right: 25px;
+   background-color: #cdcdcd;
+   text-align: center;
+   border-radius: 25px;
+   z-index: 6;
+}
+
+#habilidades h2 {
+   margin: 0px;
+}
+
+#tperera {
+   top: 5px;
+   padding-top:15px;
+}
+
+#GordoBecker {
+   top: 80px;
+   padding-top: 15px;
+}
+
+/* Reset é aki vei */
+
+
+#botaoReset {
+	position: absolute;
+	right: 50px;
+	top: 80px;
+	height: 50px;
+	width: 140px;
+	background-color: white;
+	border-radius: 25px;
+	text-align: center;
+}
+
+#botaoReset h1 {
+	margin: 0px;
+}
+
+#resetar {
+	position: absolute;
+	top: 150px;
+	left: 300px;
+	width: 400px;
+	height:300px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 35px;
+}
+
+#sim {
+	position:absolute;
+	bottom:0px;
+	left:50px;
+	z-index: 10;
+}
+
+#nao {
+	position:absolute;
+	bottom:0px;
+	right:50px;
+	z-index: 10;
+}
+
+#g_rim h1{
+	text-align: center;
+	margin:0px;
+}
+
+#gg_rim {
+	position:absolute;
+	bottom: 80px;
+	width: 400px;
+	height:40px;
+}
+
+#resetar p {
+	text-align : center;
+	margin: 10px;
+	margin-top: 20px;
+	font-size: 15pt;
+}
+
+
+/* cara sei la oq é aki */
+
+.recarga {
+   color: red;
+}
+
+.rins {
+	color: #fa5c00;
+	margin-top: -20px;
+}
+
+.comprado {
+   color: rgba(163, 1, 1, 0.822);
+}
+
+.funcionando {
+   color: #55ff55c2
+}
+
+
+
+

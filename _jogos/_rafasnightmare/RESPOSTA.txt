@@ -1,0 +1,26 @@
+Respondendo algumas Criticas Construtivas
+
+"Seria interessante trabalhar um pouco mais sobre o conteúdo do tópico dentro do jogo" - Realmente, nós da equipe Mabo Tofu tivemos problemas no momento de desenvolver as perguntas devido ao afastamento de dois membros da equipe, que estariam encarregados disso. Por problemas internos não temos um prazo para inclimentar novas perguntas, e um "addon" não seria o nosso foco no momento. A equipe Mabo Tofu Agradece.
+
+
+"Ficar mais rápido, sempre que erra uma pergunta volta para o segundo estágio, deixando o jogo mais lento ainda, melhorar controles" -  A questão da agilidade do personagem ja foi arrumada, o sistema que faz você voltar para o inicio ao morrer pode ser atualizado de forma a fazer o jogo ser completado mais rapidamente, mas isso tem que ser estudo pois se ao perder o usuario poder responder a mesma pergunta logo em seguida, perde o aspacto de desafio. Agradeçemos a dica!
+
+"É uma jogabilidade que é um pouco lenta mas tirando isso muito boa." - Como respondido acima, a velocidade do rafael ja foi aumentada. A equipe Mabo Tofu Agradece.
+
+"Achei a jogabilidade meio estranha, apesar da ideia ser muito legal, alguns fatores poderiam ter sido implementados, como a de correr." - Não compreendemos a critica a respeito da jogabilidade ja que é um sistema de macanicas mt semelhante a de outros jogos do genero, nós da equipe Mabo Tofu não vemos a necessidade de implementar um "correr" ja que isso necessitaria de novas sprites e uma atualização na função que le as teclas e não influenciria tanto na gameplay. A equipe Mabo Tofu agradece
+
+"Os controles são bem simples e fáceis de usar, mas as vezes eu ficava empacado nos bonecos" - Isso foi um erro ao programar os conflitos para impedir que o rafael passasse por cima deles, Isso Pode e sera Arruamdo o mais rapido possivel. A equipe Mabo Tofu agradece.
+
+"Jogo não explica o conteúdo, tem que ir na base da tentativa e erro." - A intenção do jogo é que as partes principais do conteudo sejam assimiladas durante o conflito, pois ao ter um problema e lutar para resolvelo o cerebro assimila aquilo muito mais rapido, se o conteudo fosse explicado o jogo tambem perderia o aspecto "Desafio", mas pode ser acrescentado um pequeno comentario da resolução apos a pergunta ser respondida. A equipe Mabo Tofu Agradece.
+
+"Não chegou a apresentar conteúdo desafiador" - Acreditamos que a dificuldade das perguntas esta em um nivel adequado, mas Agradeços o comentario.
+
+
+"Testou o conhecimento através de perguntas, mas não fez a explicação do mesmo." - como respondido acima, o jogo não tem o intuito de explicar o conteudo e sim ajudar a simalalo mais facilmente com os Desafios.
+
+"Muito interessante, porém a questão de se errar voltar ao começo acaba se tornando exaustivo quando o objetivo é apenas conhecer" - Como Respodido acima, Temos o intuito de agilizar isso, mas ainda dever ser estudado.
+
+"A estética do jogo é bem feita, apenas a questão da escrita que ficou com vários erros, mas pode ser que seja proposital." - Sobre as questoes de erros de escrita, acabamos não revizando isso por falta de tempo, Isso sera visto e arrumado o mais rapido Possivel. A equipe Mabo Tofu agradece.
+
+
+
