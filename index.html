@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <html lang="pt-br">
 
 <head>
@@ -27,21 +24,9 @@ session_start();
             </nav>
 
             <div class="autenticacao">
-                <?php 
-                
-                if($_SESSION['usuario']) {
-                    echo " <div id='logado'> 
-                   <peq> Logado:  </peq> <d> {$_SESSION['usuario']} </d>
-                   <peql> <a href='logout.php'> Sair </a> </peql> 
-                       </div>
-                    ";
-                } else {
-                    echo "<li><a href='registrologin/login1.php'>login</a></li>
-                         <li><a href='registrologin/registrando.php'>registrar</a></li>";
-                };
-
-                ?>
-                
+                <ul>
+                <li><a href='#'>login</a></li>
+                         <li><a href='#'>registrar</a></li>";
                 </ul>
             </div>
             <ul>
